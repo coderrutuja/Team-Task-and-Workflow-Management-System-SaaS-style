@@ -76,8 +76,73 @@ If not set, the client defaults to `http://localhost:4000`.
 
 ## Build & Deploy Notes
 - Build the client: `npm run build` in `taskmate-client/` (outputs to `dist/`)
-- Serve `dist/` via any static host. The API must be reachable at `VITE_API_URL` used at build/runtime.
-- Ensure server `.env` never gets committed. Use CI/CD secrets for production SMTP/JWT/Mongo.
+  - Serve `dist/` via any static host. The API must be reachable at `VITE_API_URL` used at build/runtime.
+  - Ensure server `.env` never gets committed. Use CI/CD secrets for production SMTP/JWT/Mongo.
 
 ## License
 MIT or your preferred license.
+
+## Screenshots
+Place screenshots under `docs/screenshots/` and the README will render them here.
+
+- **Auth · Login**
+  
+  ![Auth Login](docs/screenshots/auth-login.png)
+
+- **Dashboard**
+  
+  ![Dashboard](docs/screenshots/dashboard.png)
+
+- **Tasks Board**
+  
+  ![Tasks Board](docs/screenshots/tasks-board.png)
+
+- **Project Details**
+  
+  ![Project Details](docs/screenshots/project-details.png)
+
+- **Exports (CSV/PDF/XLSX)**
+  
+  ![Exports](docs/screenshots/exports.png)
+
+- **Admin · Users**
+  
+  ![Admin Users](docs/screenshots/admin-users.png)
+
+Tip: Capture with consistent window size and light theme for visual consistency.
+
+## Usage Flows
+
+- **Sign up / Sign in**
+  - Register via `/auth/register` or sign in at `/auth/login`.
+  - A JWT is stored in localStorage and used for subsequent API calls.
+
+- **Create a Project**
+  - Open Projects → New Project → fill title, description, status.
+  - Select project in the sidebar Project picker to scope your work.
+
+- **Manage Tasks**
+  - Create tasks within a selected project.
+  - Set status (todo/doing/done), priority, due date, labels, assignees.
+  - Reorder tasks and manage dependencies; track time entries.
+
+- **Comments & Activity**
+  - Add comments to tasks, view activity feed for changes.
+
+- **Files & Attachments**
+  - Upload files and attach them to tasks. Remove when not needed.
+
+- **Notifications**
+  - Bell icon shows unread count; open to view latest notifications.
+  - A scheduler can generate due-date reminders.
+
+- **Exports**
+  - Use Import/Export menu on the page header to export CSV, PDF, or XLSX filtered by current view.
+
+- **Admin · Users**
+  - Admin role can manage users (create/update/status, reset password).
+
+## Adding Your Own Screenshots
+1. Create folder `docs/screenshots/` if it does not exist.
+2. Save PNGs with descriptive names (e.g., `tasks-board.png`, `admin-users.png`).
+3. The README already references common scenes; rename or add more as needed.
