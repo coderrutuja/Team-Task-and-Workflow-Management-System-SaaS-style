@@ -1,0 +1,37 @@
+@import "@fontsource-variable/inter";
+@import "tailwindcss";
+
+@layer theme, base, components, utilities;
+
+/* Theme tokens */
+@layer theme {
+  :root {
+    --bg: 246 247 251;
+    --card: 255 255 255;
+    --muted: 99 107 121;
+    --ring: 99 102 241;
+    --border: 230 232 239;
+    --primary: 99 102 241;   /* indigo-500 */
+    --success: 16 185 129;   /* emerald-500 */
+    --warning: 245 158 11;   /* amber-500 */
+    --danger: 239 68 68;     /* red-500 */
+  }
+}
+
+/* Base reset */
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    font-family: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: rgb(var(--bg));
+    color: rgb(55 65 81);
+  }
+}
+
+/* Utilities via CSS variables */
+@layer utilities {
+  .surface { background-color: rgb(var(--card)); }
+  .muted-foreground { color: rgb(var(--muted)); }
+  .border-default { border-color: rgb(var(--border)); }
+  .ring-primary { --tw-ring-color: rgb(var(--ring)); }
+}

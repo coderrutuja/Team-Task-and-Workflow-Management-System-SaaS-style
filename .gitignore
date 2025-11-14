@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist/
+/build/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+server/.env
+server/.env.*
+taskmate-client/.env
+taskmate-client/.env.*
+
+# Vite cache
+.taskmate-client/.vite
+
+# Uploads and runtime data
+server/uploads/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
